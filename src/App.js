@@ -24,7 +24,7 @@ const App = () => {
       let data = new FormData();
       data.append("logs", file);
       axios
-        .post("http://localhost:5000", data)
+        .post("https://log-parser-task.herokuapp.com/", data)
         .then((res) => {
           downloadFile(res.data.data);
         })
