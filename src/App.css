@@ -36,3 +36,33 @@
     transform: rotate(360deg);
   }
 }
+
+/* Define css class for global loading message to cover 
+   screen during axios operations */
+
+.loading-indicator:before {
+  content: "";
+  background: #222121cc;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.loading-indicator:after {
+  content: "";
+  background: url("../public/logo512.png") no-repeat center center;
+  background-size: 50px;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
